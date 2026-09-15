@@ -1,4 +1,2 @@
-TODO_DEPLOY_LIVE_DEMO_URL
+LIVE_DEMO_URL : https://bob-ai-hackathon-missionmindai-zyqfbfxon3h9vnyknoocgh.streamlit.app/
 
-This project runs locally. See docs/setup-guide.md for full setup instructions.
-To run the MCP server: python src/mcp/mcp_server.py --stdio
