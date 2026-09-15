@@ -11,17 +11,19 @@
 team:
   name: "MissionMind AI" # REQUIRED
   track: "AI" # REQUIRED
-  team name: "MissionMind AI"
-  lead name: "Tanvi Ramani" # REQUIRED
+  lead:
+  name: "Tanvi Ramani" # REQUIRED
     email: "24it083@charusat.edu.in" # REQUIRED
-  members name: "Vekariya Hardi Ghanshyambhai" # REQUIRED
+  members:
+     - name: "Vekariya Hardi Ghanshyambhai" # REQUIRED
       email: "24it108@charusat.edu.in"
     - name: "Vyas Rucha" # REQUIRED
       email: "24it111@charusat.edu.in"
     - name: "Ughareja Purv HiteshBhai" # REQUIRED
       email: "24it100@charusat.edu.in"
 
-submission title: "AeroGuard-Bob: HUMS Mission-Readiness & Predictive Maintenance Copilot"
+submission:
+title: "AeroGuard-Bob: HUMS Mission-Readiness & Predictive Maintenance Copilot"
 
   problem_statement: >
     Modern military aviation incurs over $90 billion annually in maintenance
