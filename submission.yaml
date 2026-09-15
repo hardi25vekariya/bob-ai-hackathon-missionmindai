@@ -11,6 +11,7 @@
 team:
   name: "MissionMind AI" # REQUIRED
   track: "AI" # REQUIRED
+  team name: "MissionMind AI"
   lead name: "Tanvi Ramani" # REQUIRED
     email: "24it083@charusat.edu.in" # REQUIRED
   members name: "Vekariya Hardi Ghanshyambhai" # REQUIRED
