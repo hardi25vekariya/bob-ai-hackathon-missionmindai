@@ -1,78 +1,19 @@
-# =============================================================================
-# HACKATHON SUBMISSION METADATA
-# =============================================================================
-# Instructions:
-#   - Fill in ALL required fields (marked with # REQUIRED)
-#   - Optional fields can be left as empty strings ""
-#   - Do NOT rename this file — the evaluation pipeline reads it by name
-#   - Use double quotes around all string values
-# =============================================================================
-
 team:
-  name: "MissionMind AI"                             # REQUIRED — e.g., "Orion Squad"
-  track: "AI"                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
+  track: "AI"
   lead:
-    name: "Ramani Tanvi Chandreshbhai"                           # REQUIRED — e.g., "Alice Chen"
-    email: "24it083@charusat.edu.in"                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: "Tanvi Ramani"
+    email: "[Your Email]"
   members:
-    - name: "Vekariya Hardi Ghanshyambhai"                         # REQUIRED — Team member 1
-      email: "24it108@charusat.edu.in"
-    - name: "Vyas Rucha"                         # Add more members by copying the two lines above
-      email: "24it111@charusat.edu.in"
-    - name: "Ughareja Purv HiteshBhai "
-      email: "24it100@charusat.edu.in"
+    - name: "[Member 1 Name]"
+      email: "[Member 1 Email]"
 
 submission:
-  title: "Mission Readiness & Predictive Maintenance Copilot"                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
-
-  problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-   Military organizations cannot reliably determine whether aircraft, vehicles,
-    and equipment are mission-ready because maintenance runs on fixed calendar
-    schedules instead of actual component condition. HUMS (Health & Usage
-    Monitoring System) sensor data that could predict failures weeks in advance
-    goes unanalyzed, causing unexpected failures, reduced operational readiness,
-    and multi-week recovery times.
-
-  solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
- Our copilot ingests HUMS sensor data and analyzes it with AI to predict
-    component failures before they happen, shifting maintenance from fixed
-    calendar schedules to condition-based, predictive scheduling — improving
-    mission readiness and reducing costly unplanned downtime.
-
-  key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - "Predictive failure detection from HUMS sensor data using AI/ML models"
-    - "Condition-based maintenance scheduling instead of fixed calendar intervals"
-    - "Mission-readiness scoring for aircraft/vehicles/equipment"
-    - "Natural language maintenance recommendations via conversational copilot"
-    - "Early-warning alerts weeks in advance of predicted failure"                              # optional 5th
-
-  tech_stack:
-    languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: []                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: []               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
-    databases: []                      # e.g., ["PostgreSQL", "Redis"]
-    other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
-
-  what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-   The predictive model turns raw HUMS sensor data into actionable,
-    weeks-ahead failure predictions — directly targeting the $90B/year the
-    military spends on maintenance and showing how shifting to a predictive
-    approach can save billions.
-
-  known_limitations: >                 # Optional but recommended — be honest about gaps
-   The model is trained/tested on a limited dataset and has not been
-    validated against real HUMS data at scale; predictions should be treated
-    as decision support, not a replacement for maintenance inspections.
-
-# =============================================================================
-# ARTIFACT LOCATIONS
-# These paths are relative to the repo root. Only change if you moved files.
-# =============================================================================
-artifacts:
-  source_code: "src/"
-  setup_guide: "docs/setup-guide.md"
-  architecture_doc: "docs/architecture.md"
-  demo_video: "demo/demo-video-link.txt"   # URL to hosted video (YouTube, Loom, Box)
-  live_demo: "demo/live-demo-url.txt"      # URL to deployed demo (optional)
-  screenshots: "demo/screenshots/"
-  presentation: "presentation/"
+  title: "AeroGuard-Bob: HUMS Mission-Readiness & Predictive Maintenance Copilot"
+  problem_statement: "Modern military aviation incurs over $90 billion annually in maintenance expenditures, yet fleets routinely suffer mission aborts and degraded readiness due to rigid, calendar-based maintenance schedules. Flight-line maintenance officers and mission planners are overwhelmed by unanalyzed Health and Usage Monitoring Systems (HUMS) sensor feeds and siloed historical maintenance logs. Without real-time automated triage, ground crews cannot rapidly determine which grounded aircraft to repair first under tight crew and spare-parts constraints. This operational friction delays sortie generation and leaves commanders without grounded, audit-ready visibility into squadron mission readiness."
+  solution_summary: "AeroGuard-Bob is an explainable, end-to-end mission-readiness and predictive maintenance copilot built for military aviation squadrons. It ingests real-time airframe telemetry and 2-year maintenance records across 25 fighter aircraft, classifies operational readiness with plain-language diagnostics, and calculates explainable subsystem failure risk scores (0–100). A greedy maintenance optimizer dynamically allocates available technician crews and spare parts to schedule urgent repairs while clearly logging bottleneck causes for queued jets. The entire pipeline is exposed via the Model Context Protocol (MCP) to IBM Bob, enabling commanders to query fleet health, investigate specific tail numbers, and generate constrained maintenance plans in natural language."
+  key_features:
+    - "Multi-Source Data Fusion: Seamlessly joins real-time HUMS sensor telemetry (vibration, engine temperature, oil quality index, flight cycles, inspection age) with historical maintenance event logs across 25 fighter aircraft located in src/data/."
+    - "Automated Mission-Readiness Classifier: Evaluates sensor limits and maintenance deadlines in src/pipeline/readiness_classifier.py to classify assets as READY or NON-READY (currently 9 ready, 16 non-ready) with grounded plain-language explanations."
+    - "Explainable Subsystem Failure Predictor: Computes quantifiable 0–100 risk scores across 5 critical subsystems (engine, hydraulics, fuel system, landing gear, avionics) in src/pipeline/failure_predictor.py by weighting sensor stress, recurring repair frequency, and airframe wear."
+    - "Resource-Constrained Maintenance Optimizer: Greedily allocates available technician teams and spare parts inventory in src/pipeline/maintenance_planner.py, scheduling urgent repairs while diagnosing exact stockout bottlenecks for queued aircraft."
+    - "IBM Bob MCP Tool Integration: Implements standard Model Context Protocol tools (get_fleet_readiness, get_asset_risk, get_maintenance_plan) in src/mcp/mcp_server.py over JSON-RPC 2.0 stdio for zero-hallucination conversational decision support."

@@ -1,21 +1,41 @@
-# Problem Statement
+# Problem Statement: Military Asset Mission Readiness & Sustainment
 
-## Background
+## 1. Operational Context & Affected Audience
 
-[Describe the broader context. What domain or industry does this problem belong to? What situation creates the problem?]
+In defense and tactical aerospace operations, aircraft availability directly dictates air superiority and mission success. The target stakeholders experiencing this operational friction include:
 
-## The Problem
+1. **Flight-Line Maintenance Officers (FLMOs)**: Responsible for daily turn-around, pre-flight inspections, red-tagging at-risk jets, and assigning flight-line repair crews.
+2. **Squadron Maintenance Chiefs**: Responsible for hangar capacity, spare parts depot requisition, and multi-week phase maintenance scheduling.
+3. **Wing Mission Planners & Commanders**: Responsible for sortie generation, tasking mission-ready aircraft, and assessing overall squadron airworthiness.
 
-[State the problem clearly and specifically. Avoid vague statements like "things are slow" — instead say "Operations teams spend an average of 45 minutes per incident diagnosing pipeline failures because logs are scattered across 6 different tools."]
+Every minute an aircraft sits unexpectedly grounded degrades tactical readiness and increases operational risk.
 
-## Who is Affected
+---
 
-[Describe the specific user or persona experiencing this problem. Be concrete — not "developers" but "backend engineers managing CI/CD pipelines in enterprises with 50+ microservices."]
+## 2. Why Existing Solutions Fail
 
-## Why It Matters
+Modern military aircraft are equipped with sophisticated **Health and Usage Monitoring Systems (HUMS)** that measure high-rate telemetry, including bearing vibration, turbine interstage temperatures, and lubricant particulate counts. However, existing maintenance operations remain broken across three critical failure modes:
 
-[What is the cost of this problem? Lost time? Revenue? Safety risk? Frustration? Quantify if possible.]
+### A. The Rigid Calendar-Based Maintenance Trap
+Schedules are heavily reliant on fixed calendar days (e.g. 180-day phase inspections) or periodic cycle milestones. This creates two catastrophic failure patterns:
+- **Premature Failures**: High-vibration micro-fractures or cooling duct blockages develop between scheduled intervals, leading to in-flight aborts or engine catastrophic damage.
+- **Over-Maintenance**: Healthy aircraft are frequently grounded for invasive teardowns solely due to calendar deadlines, exhausting technician hours and inducing human maintenance errors.
 
-## Why Existing Solutions Fall Short
+### B. Siloed, Unanalyzed Telemetry Streams
+HUMS sensor dumps and historical maintenance databases (e.g., IMDS / ALIS / ODIN) reside in disconnected silos. A maintenance technician looking at a high engine vibration reading on the flight line does not have immediate, automated visibility into whether that specific tail number had its stage-2 compressor bearing replaced six months prior.
 
-[Briefly explain what people currently do and why it doesn't fully solve the problem. This sets up why your solution is needed.]
+### C. Resource-Blind Maintenance Queuing
+When an operational wing returns from high-tempo sorties, 10–15 aircraft may require maintenance simultaneously. Existing ERP and dashboard systems simply generate static lists of work orders. They do not calculate dynamic, constrained repair schedules that factor in:
+- The exact number of certified maintenance crews on shift.
+- Real-time stock levels of subsystem spare parts in the local parts locker.
+- Risk-based triage ranking (fixing the jet that provides maximum readiness return with available resources).
+
+---
+
+## 3. Why This Matters Now
+
+- **Staggering Economic Costs**: The US Department of Defense spends over **$90 billion annually** on weapon system sustainment, with aircraft maintenance representing the single largest share.
+- **Rising Airframe Aging**: Modern military fleets are flying beyond their original design life cycles, making predictive anomaly detection vital to preventing structural fatigue failures.
+- **Operational Necessity**: In contested combat environments, sorties must be generated rapidly with limited forward-deployed maintenance crews and austere spare-parts supply chains. 
+
+AeroGuard-Bob delivers an automated, explainable, and conversational intelligence layer that converts passive HUMS telemetry into immediate, data-grounded maintenance decisions.
