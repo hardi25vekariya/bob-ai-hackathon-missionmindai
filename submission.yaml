@@ -1,20 +1,113 @@
+# =============================================================================
+# HACKATHON SUBMISSION METADATA
+# =============================================================================
+# Instructions:
+#   - Fill in ALL required fields (marked with # REQUIRED)
+#   - Optional fields can be left as empty strings ""
+#   - Do NOT rename this file — the evaluation pipeline reads it by name
+#   - Use double quotes around all string values
+# =============================================================================
+
 team:
-  name: "MissionMind AI"
-  track: "AI"
+  name: "MissionMind AI" # REQUIRED
+  track: "AI" # REQUIRED
   lead:
-    name: "Tanvi Ramani"
-    email: "TODO_USER_EMAIL"
+    name: "Tanvi Ramani" # REQUIRED
+    email: "24it083@charusat.edu.in" # REQUIRED
   members:
-    - name: "TODO_TEAM_MEMBER_NAME"
-      email: "TODO_TEAM_MEMBER_EMAIL"
+    - name: "Vekariya Hardi Ghanshyambhai" # REQUIRED
+      email: "24it108@charusat.edu.in"
+    - name: "Vyas Rucha" # REQUIRED
+      email: "24it111@charusat.edu.in"
+    - name: "Ughareja Purv HiteshBhai" # REQUIRED
+      email: "24it100@charusat.edu.in"
 
 submission:
   title: "AeroGuard-Bob: HUMS Mission-Readiness & Predictive Maintenance Copilot"
-  problem_statement: "Modern military aviation incurs over $90 billion annually in maintenance expenditures, yet fleets routinely suffer mission aborts and degraded readiness due to rigid, calendar-based maintenance schedules. Flight-line maintenance officers and mission planners are overwhelmed by unanalyzed Health and Usage Monitoring Systems (HUMS) sensor feeds and siloed historical maintenance logs. Without real-time automated triage, ground crews cannot rapidly determine which grounded aircraft to repair first under tight crew and spare-parts constraints. This operational friction delays sortie generation and leaves commanders without grounded, audit-ready visibility into squadron mission readiness."
-  solution_summary: "AeroGuard-Bob is an explainable, end-to-end mission-readiness and predictive maintenance copilot built for military aviation squadrons. It ingests real-time airframe telemetry and 2-year maintenance records across 25 fighter aircraft, classifies operational readiness with plain-language diagnostics, and calculates explainable subsystem failure risk scores (0–100). A greedy maintenance optimizer dynamically allocates available technician crews and spare parts to schedule urgent repairs while clearly logging bottleneck causes for queued jets. The entire pipeline is exposed via the Model Context Protocol (MCP) to IBM Bob, enabling commanders to query fleet health, investigate specific tail numbers, and generate constrained maintenance plans in natural language."
+
+  problem_statement: >
+    Modern military aviation incurs over $90 billion annually in maintenance
+    expenditures, yet fleets routinely suffer mission aborts and degraded
+    readiness due to rigid, calendar-based maintenance schedules. Flight-line
+    maintenance officers and mission planners are overwhelmed by unanalyzed
+    Health and Usage Monitoring Systems (HUMS) sensor feeds and siloed
+    historical maintenance logs. Without real-time automated triage, ground
+    crews cannot rapidly determine which grounded aircraft to repair first
+    under tight crew and spare-parts constraints. This operational friction
+    delays sortie generation and leaves commanders without grounded,
+    audit-ready visibility into squadron mission readiness.
+
+  solution_summary: >
+    AeroGuard-Bob is an explainable, end-to-end mission-readiness and
+    predictive maintenance copilot built for military aviation squadrons.
+    It ingests real-time airframe telemetry and 2-year maintenance records
+    across 25 fighter aircraft, classifies operational readiness with
+    plain-language diagnostics, and calculates explainable subsystem failure
+    risk scores from 0 to 100. A greedy maintenance optimizer dynamically
+    allocates available technician crews and spare parts to schedule urgent
+    repairs while clearly logging bottleneck causes for queued jets. The
+    entire pipeline is exposed via the Model Context Protocol (MCP) to IBM Bob,
+    enabling commanders to query fleet health, investigate specific tail
+    numbers, and generate constrained maintenance plans in natural language.
+
   key_features:
-    - "Multi-Source Data Fusion: Seamlessly joins real-time HUMS sensor telemetry (vibration, engine temperature, oil quality index, flight cycles, inspection age) with historical maintenance event logs across 25 fighter aircraft located in src/data/."
-    - "Automated Mission-Readiness Classifier: Evaluates sensor limits and maintenance deadlines in src/pipeline/readiness_classifier.py to classify assets as READY or NON-READY (currently 9 ready, 16 non-ready) with grounded plain-language explanations."
-    - "Explainable Subsystem Failure Predictor: Computes quantifiable 0–100 risk scores across 5 critical subsystems (engine, hydraulics, fuel system, landing gear, avionics) in src/pipeline/failure_predictor.py by weighting sensor stress, recurring repair frequency, and airframe wear."
-    - "Resource-Constrained Maintenance Optimizer: Greedily allocates available technician teams and spare parts inventory in src/pipeline/maintenance_planner.py, scheduling urgent repairs while diagnosing exact stockout bottlenecks for queued aircraft."
-    - "IBM Bob MCP Tool Integration: Implements standard Model Context Protocol tools (get_fleet_readiness, get_asset_risk, get_maintenance_plan) in src/mcp/mcp_server.py over JSON-RPC 2.0 stdio for zero-hallucination conversational decision support."
+    - "Multi-Source Data Fusion: Seamlessly joins real-time HUMS sensor telemetry including vibration, engine temperature, oil quality index, flight cycles, and inspection age with historical maintenance event logs across 25 fighter aircraft."
+
+    - "Automated Mission-Readiness Classifier: Evaluates sensor limits and maintenance deadlines in src/pipeline/readiness_classifier.py to classify assets as READY or NON-READY with grounded plain-language explanations."
+
+    - "Explainable Subsystem Failure Predictor: Computes quantifiable 0–100 risk scores across 5 critical subsystems — engine, hydraulics, fuel system, landing gear, and avionics — using sensor stress, recurring repair frequency, and airframe wear."
+
+    - "Resource-Constrained Maintenance Optimizer: Greedily allocates available technician teams and spare-parts inventory in src/pipeline/maintenance_planner.py, scheduling urgent repairs while diagnosing stockout bottlenecks for queued aircraft."
+
+    - "IBM Bob MCP Tool Integration: Implements Model Context Protocol tools including get_fleet_readiness, get_asset_risk, and get_maintenance_plan in src/mcp/mcp_server.py over JSON-RPC 2.0 stdio for grounded conversational decision support."
+
+  tech_stack:
+    languages:
+      - "Python"
+
+    frameworks:
+      - "Model Context Protocol (MCP)"
+
+    ibm_technologies:
+      - "IBM Bob"
+
+    databases: []
+
+    other:
+      - "JSON-RPC 2.0"
+      - "CSV"
+      - "Explainable Rule-Based Scoring"
+      - "Resource-Constrained Maintenance Optimization"
+
+  what_we_are_most_proud_of: >
+    The strongest part of AeroGuard-Bob is its complete Predict → Explain →
+    Prioritize → Act workflow. The system combines HUMS telemetry and
+    maintenance history to identify non-ready aircraft, explain the factors
+    behind subsystem risk, prioritize repairs using technician and spare-parts
+    constraints, and expose these grounded decisions through IBM Bob using MCP.
+    This creates an explainable and auditable conversational decision-support
+    workflow rather than a simple monitoring dashboard.
+
+  known_limitations: >
+    The current prototype uses synthetic or simulated HUMS and maintenance
+    data rather than real operational military data. The failure-risk engine
+    uses explainable rule-based scoring and has not been validated against
+    large-scale real HUMS datasets or live aircraft feeds. The prototype
+    fleet and maintenance optimizer represent a limited demonstration
+    environment, and production deployment would require additional security,
+    authentication, authorization, audit logging, data governance, and
+    validation against approved maintenance procedures.
+
+# =============================================================================
+# ARTIFACT LOCATIONS
+# These paths are relative to the repo root. Only change if you moved files.
+# =============================================================================
+
+artifacts:
+  source_code: "src/"
+  setup_guide: "docs/setup-guide.md"
+  architecture_doc: "docs/architecture.md"
+  demo_video: "demo/demo-video-link.txt"
+  live_demo: "demo/live-demo-url.txt"
+  screenshots: "demo/screenshots/"
+  presentation: "presentation/"
