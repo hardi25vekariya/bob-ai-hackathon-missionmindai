@@ -1,11 +1,12 @@
 team:
+  name: "MissionMind AI"
   track: "AI"
   lead:
     name: "Tanvi Ramani"
-    email: "[Your Email]"
+    email: "TODO_USER_EMAIL"
   members:
-    - name: "[Member 1 Name]"
-      email: "[Member 1 Email]"
+    - name: "TODO_TEAM_MEMBER_NAME"
+      email: "TODO_TEAM_MEMBER_EMAIL"
 
 submission:
   title: "AeroGuard-Bob: HUMS Mission-Readiness & Predictive Maintenance Copilot"
