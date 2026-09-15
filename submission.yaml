@@ -9,36 +9,42 @@
 # =============================================================================
 
 team:
-  name: ""                             # REQUIRED — e.g., "Orion Squad"
-  track: ""                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
+  name: "MissionMind AI"                             # REQUIRED — e.g., "Orion Squad"
+  track: "AI"                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
   lead:
-    name: ""                           # REQUIRED — e.g., "Alice Chen"
-    email: ""                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: "Ramani Tanvi Chandreshbhai"                           # REQUIRED — e.g., "Alice Chen"
+    email: "24it083@charusat.edu.in"                          # REQUIRED — e.g., "alice.chen@ibm.com"
   members:
-    - name: ""                         # REQUIRED — Team member 1
-      email: ""
-    - name: ""                         # Add more members by copying the two lines above
-      email: ""
-    - name: ""
-      email: ""
+    - name: "Vekariya Hardi Ghanshyambhai"                         # REQUIRED — Team member 1
+      email: "24it108@charusat.edu.in"
+    - name: "Vyas Rucha"                         # Add more members by copying the two lines above
+      email: "24it111@charusat.edu.in"
+    - name: "Ughareja Purv HiteshBhai "
+      email: "24it100@charusat.edu.in"
 
 submission:
-  title: ""                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+  title: "Mission Readiness & Predictive Maintenance Copilot"                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
 
   problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-    Replace this text with a concise description of the real-world problem
-    your project addresses and who experiences it.
+   Military organizations cannot reliably determine whether aircraft, vehicles,
+    and equipment are mission-ready because maintenance runs on fixed calendar
+    schedules instead of actual component condition. HUMS (Health & Usage
+    Monitoring System) sensor data that could predict failures weeks in advance
+    goes unanalyzed, causing unexpected failures, reduced operational readiness,
+    and multi-week recovery times.
 
   solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
-    Replace this text with a clear description of your solution
-    and how it addresses the problem above.
+ Our copilot ingests HUMS sensor data and analyzes it with AI to predict
+    component failures before they happen, shifting maintenance from fixed
+    calendar schedules to condition-based, predictive scheduling — improving
+    mission readiness and reducing costly unplanned downtime.
 
   key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - ""                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - ""
-    - ""
-    - ""                               # optional 4th
-    - ""                               # optional 5th
+    - "Predictive failure detection from HUMS sensor data using AI/ML models"
+    - "Condition-based maintenance scheduling instead of fixed calendar intervals"
+    - "Mission-readiness scoring for aircraft/vehicles/equipment"
+    - "Natural language maintenance recommendations via conversational copilot"
+    - "Early-warning alerts weeks in advance of predicted failure"                              # optional 5th
 
   tech_stack:
     languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
@@ -48,12 +54,15 @@ submission:
     other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
 
   what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-    Replace with what aspect of the submission you consider strongest
-    and want judges to pay special attention to.
+   The predictive model turns raw HUMS sensor data into actionable,
+    weeks-ahead failure predictions — directly targeting the $90B/year the
+    military spends on maintenance and showing how shifting to a predictive
+    approach can save billions.
 
   known_limitations: >                 # Optional but recommended — be honest about gaps
-    Replace with any known limitations, incomplete features,
-    or shortcuts taken due to time constraints.
+   The model is trained/tested on a limited dataset and has not been
+    validated against real HUMS data at scale; predictions should be treated
+    as decision support, not a replacement for maintenance inspections.
 
 # =============================================================================
 # ARTIFACT LOCATIONS
