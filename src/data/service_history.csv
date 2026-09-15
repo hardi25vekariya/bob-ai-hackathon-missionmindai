@@ -1,0 +1,75 @@
+asset_id,date,component,issue_found,action_taken
+Tail-124,2026-08-26,hydraulics,Speedbrake hydraulic cylinder micro-seal replacement,replaced
+Tail-102,2026-08-16,engine,Periodic oil sample Spectrometric Oil Analysis (SOAP),inspected_ok
+Tail-117,2026-08-16,engine,Fan casing acoustic liner separation causing vibration,repaired
+Tail-115,2026-08-11,avionics,Cockpit multi-function display bezel switch replaced,replaced
+Tail-109,2026-08-06,hydraulics,Flight control surface PCU routine seal check,inspected_ok
+Tail-119,2026-08-06,engine,Turbine disk rim cooling air seal leakage,repaired
+Tail-104,2026-08-01,engine,Acoustic sensor flagged intermittent fan blade resonance,inspected_ok
+Tail-122,2026-08-01,engine,Bearing compartment carbon seal wear and oil misting,repaired
+Tail-113,2026-07-27,engine,Routine engine vibration survey - all bands nominal,inspected_ok
+Tail-121,2026-07-27,avionics,Engine HUMS accelerometer sensor recalibrated,inspected_ok
+Tail-106,2026-07-22,engine,Lube scavenge pump magnetic chip detector trip,repaired
+Tail-101,2026-07-17,engine,Routine 100-hour engine health check,inspected_ok
+Tail-112,2026-07-17,engine,Main shaft roller bearing spalling and accelerated wear,repaired
+Tail-123,2026-07-12,avionics,FADEC digital engine control harness connector cleaning,inspected_ok
+Tail-114,2026-07-07,engine,Interstage turbine temperature sensor harness thermal damage,repaired
+Tail-107,2026-07-02,avionics,TACAN navigation receiver sensitivity alignment,repaired
+Tail-118,2026-06-27,engine,Oil cooler core internal sludge buildup flushed,repaired
+Tail-103,2026-06-22,fuel_system,Main fuel metering valve sluggish response at high fuel flow,repaired
+Tail-111,2026-06-22,engine,Compressor wash and blade cleanliness verification,inspected_ok
+Tail-108,2026-06-17,engine,Compressor rear bearing cage excessive play detected,repaired
+Tail-116,2026-06-12,engine,Routine oil change and scavenge strainer clean,replaced
+Tail-125,2026-05-28,engine,Intermediate casing strut structural crack inspection,repaired
+Tail-117,2026-04-28,hydraulics,Primary hydraulic actuator dampening valve leak,replaced
+Tail-102,2026-04-18,avionics,IFF transponder firmware security update,repaired
+Tail-115,2026-04-08,engine,Igniter plug inspection and gap measurement,inspected_ok
+Tail-110,2026-04-03,engine,Phase II engine scheduled hot section inspection,inspected_ok
+Tail-105,2026-03-29,engine,Scheduled 200-cycle borescope inspection completed cleanly,inspected_ok
+Tail-120,2026-03-24,engine,Routine engine health monitoring trend baseline verification,inspected_ok
+Tail-119,2026-03-19,fuel_system,Fuel-oil heat exchanger thermal bypass valve sticking,replaced
+Tail-106,2026-03-09,engine,Carbon face seal leakage into bearing sump cavity,repaired
+Tail-111,2026-03-09,fuel_system,Auxiliary tank transfer valve seal replacement,replaced
+Tail-103,2026-02-27,engine,Afterburner flameholder thermal distress observed,replaced
+Tail-104,2026-02-17,engine,No. 3 bearing clearance micro-jitter during full throttle test,repaired
+Tail-107,2026-02-17,landing_gear,Nose wheel steering centering actuator lubricated,inspected_ok
+Tail-122,2026-02-17,engine,Oil pressure regulating valve spring tension fatigue,replaced
+Tail-124,2026-02-17,engine,Periodic borescope inspection of compressor stages 1-3,inspected_ok
+Tail-121,2026-02-07,engine,Compressor bleed valve flutter during transonic climb,repaired
+Tail-113,2026-01-28,landing_gear,Main gear brake pack wear pin measurement normal,inspected_ok
+Tail-123,2026-01-18,engine,Compressor discharge air cooling tube micro-perforation,replaced
+Tail-101,2026-01-08,landing_gear,Main landing gear tire wear replacement,replaced
+Tail-112,2025-12-29,hydraulics,Hydraulic pressure ripple and pump housing vibration,repaired
+Tail-109,2025-12-09,avionics,VHF/UHF comm radio crystal oscillator calibration,repaired
+Tail-118,2025-12-09,hydraulics,Hydraulic return filter element differential pressure spike,replaced
+Tail-114,2025-11-29,engine,High-pressure turbine nozzle guide vane erosion,replaced
+Tail-125,2025-11-09,engine,Variable stator vane actuator binding causing vibration spikes,repaired
+Tail-116,2025-10-30,landing_gear,Emergency gear extension nitrogen bottle pressure checked,inspected_ok
+Tail-108,2025-10-20,engine,High pressure turbine blade thermal coating degradation,replaced
+Tail-120,2025-09-20,fuel_system,Wing dry bay fuel vapor sensor functional test,inspected_ok
+Tail-105,2025-08-31,landing_gear,Nose landing gear centering cam shim replacement,replaced
+Tail-117,2025-08-21,engine,Accessory gearbox drive shaft misalignment flutter,repaired
+Tail-119,2025-08-11,engine,Augmentor fuel spray bar differential pressure warning,repaired
+Tail-110,2025-08-01,avionics,Mission computer tactical datalink bus check,inspected_ok
+Tail-102,2025-07-22,hydraulics,Brake accumulator pre-charge pressure verified,inspected_ok
+Tail-104,2025-07-22,engine,High harmonic vibration detected in stage-2 compressor,repaired
+Tail-106,2025-07-12,engine,Oil reservoir froth warning and viscosity breakdown,replaced
+Tail-115,2025-07-02,hydraulics,Canard actuation system return line O-ring replaced,replaced
+Tail-103,2025-06-22,engine,Combustor swirl nozzle carbon coking causing hot streaks,repaired
+Tail-122,2025-06-12,engine,Bevel gear oil jet nozzle particulate blockage,repaired
+Tail-124,2025-06-12,avionics,Air data computer pitot-static leak check nominal,inspected_ok
+Tail-111,2025-06-02,landing_gear,Anti-skid wheel speed transducer harness bracket tightened,repaired
+Tail-112,2025-05-23,engine,Lube scavenge chip detector flagged metallic particulates,replaced
+Tail-107,2025-05-13,fuel_system,In-flight refueling probe latch seal replacement,replaced
+Tail-101,2025-05-03,avionics,HUD display brightness control potentiometer replaced,replaced
+Tail-123,2025-05-03,engine,Exhaust gas temperature margin degradation on climb,repaired
+Tail-108,2025-04-23,engine,Turbine exhaust gas temperature probe drift and rotor jitter,repaired
+Tail-113,2025-04-23,avionics,Electronic warfare pod cooling fan filter cleaned,inspected_ok
+Tail-118,2025-04-13,engine,Synthetic lube oil contamination with particulate debris,replaced
+Tail-109,2025-04-03,engine,Scheduled 500-hr oil filter change & magnetic plug check,replaced
+Tail-121,2025-03-24,engine,Low pressure turbine stator vane fatigue crack detected in NDT,replaced
+Tail-105,2025-03-14,avionics,Radar altimeter self-test checksum error,repaired
+Tail-114,2025-03-04,engine,Turbine shroud cooling duct partial thermal blockage,repaired
+Tail-116,2025-02-22,fuel_system,Fuel boost pump pressure switch bench test,inspected_ok
+Tail-120,2025-02-12,landing_gear,Main gear torque link bushing wear within allowable limits,inspected_ok
+Tail-110,2025-01-23,hydraulics,Utility hydraulic system reservoir accumulator recharge,repaired
