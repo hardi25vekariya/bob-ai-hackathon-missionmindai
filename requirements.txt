@@ -1,6 +1,6 @@
 # AeroGuard-Bob — Python dependencies
 # Install with: pip install -r requirements.txt
-#
+
 # Runtime (pipeline + MCP server)
 pandas>=1.5.0
 numpy>=1.23.0
