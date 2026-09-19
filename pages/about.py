@@ -33,36 +33,33 @@ st.markdown('<div class="section-header">INTELLIGENCE WORKFLOW</div>', unsafe_al
 
 st.html(
     """
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: rgba(17, 24, 39, 0.5); border-radius: 12px; border: 1px solid var(--border-color);">
+    <div style="background: rgba(17, 24, 39, 0.5); border-radius: 12px; border: 1px solid var(--border-color); padding: 2rem;">
         
-        <div style="background: var(--primary-color); color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; min-width: 200px; text-align: center;">
-            DATA COLLECTION
-        </div>
+        <h4 style="color: #60a5fa; margin-bottom: 1rem;">1. Data Engineering Layer</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Raw telemetry data is collected from aircraft sensors. We synthesize critical behavioral metrics including <strong>7-day vibration trends</strong>, <strong>temperature volatility</strong>, and <strong>oil degradation rates</strong>. This historical behavior data forms the foundation for predictive analytics rather than relying on static thresholds.
+        </p>
+
+        <h4 style="color: #60a5fa; margin-bottom: 1rem;">2. Machine Learning Pipeline (Behavioral Anomaly)</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">
+            The core engine uses an unsupervised <strong>Isolation Forest</strong> algorithm (`scikit-learn`) to evaluate the high-dimensional feature space of each aircraft. It detects complex, non-linear anomalies in asset behavior and translates them into a normalized <strong>Cancellation Probability (0-100%)</strong>.
+        </p>
         
-        <div style="color: var(--primary-color); font-size: 1.5rem; margin: 10px 0;">↓</div>
-        
-        <div style="background: var(--primary-color); color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; min-width: 200px; text-align: center;">
-            AI ANALYSIS
-        </div>
-        
-        <div style="color: var(--primary-color); font-size: 1.5rem; margin: 10px 0;">↓</div>
-        
-        <div style="background: var(--primary-color); color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; min-width: 200px; text-align: center;">
-            PREDICTION
-        </div>
-        
-        <div style="color: var(--primary-color); font-size: 1.5rem; margin: 10px 0;">↓</div>
-        
-        <div style="background: var(--primary-color); color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; min-width: 200px; text-align: center;">
-            DECISION SUPPORT
-        </div>
-        
-        <div style="color: var(--primary-color); font-size: 1.5rem; margin: 10px 0;">↓</div>
-        
-        <div style="background: #10b981; color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; min-width: 200px; text-align: center;">
-            MISSION READINESS
-        </div>
-        
+        <h4 style="color: #60a5fa; margin-bottom: 1rem;">3. Business Logic & Triage (Backend)</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">
+            The <code>readiness_classifier</code> and <code>failure_predictor</code> modules aggregate the ML probabilities with raw sensor states to determine the overall Risk Score and Primary Component at Risk. The <code>maintenance_planner</code> then applies a greedy algorithm to schedule urgent repairs based on dynamically configurable crew and spare part constraints.
+        </p>
+
+        <h4 style="color: #60a5fa; margin-bottom: 1rem;">4. MCP / IBM Bob Intelligence Layer</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">
+            The entire backend is exposed via a Model Context Protocol (MCP) server. This allows AI assistants (like IBM Bob) to query live fleet readiness, asset risks, and maintenance queues using JSON-RPC. This ensures zero hallucination—the chatbot answers are 100% grounded in live telemetry data.
+        </p>
+
+        <h4 style="color: #60a5fa; margin-bottom: 1rem;">5. Streamlit Presentation Layer</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0;">
+            The frontend provides an executive dashboard, detailed asset investigation, and interactive resource planning. It seamlessly integrates the AI's cancellation predictions and chatbot interfaces into a modern, responsive web application.
+        </p>
+
     </div>
     """
 )

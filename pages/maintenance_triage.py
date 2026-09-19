@@ -37,12 +37,20 @@ with st.form("maintenance_form"):
                 step=1,
             )
 
-    submitted = st.form_submit_button("⚙️ Generate Maintenance Plan", use_container_width=True)
+    submitted = st.form_submit_button("Generate Maintenance Plan", use_container_width=True)
 
 if submitted:
     if crews < 0:
         st.error("Crew count cannot be negative.")
     else:
+        if crews == 0:
+            st.markdown("""
+            <div style="background-color:#fef2f2; border-left:4px solid #ef4444; padding:1rem; margin-bottom:1rem; border-radius:4px;">
+                <h4 style="margin:0; color:#b91c1c; font-size:1rem;">🚨 CRITICAL RESOURCE ANOMALY</h4>
+                <p style="margin:0; margin-top:0.25rem; color:#991b1b; font-size:0.9rem;">There are currently <strong>0 maintenance crews</strong> available, but assets require urgent repairs. All maintenance tasks are queued indefinitely. Immediate resource reallocation is required.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
         try:
             plan_result = handle_get_maintenance_plan(
                 available_crews=int(crews),
@@ -55,7 +63,7 @@ if submitted:
                 metrics = plan_result["metrics"]
                 schedule = plan_result["maintenance_schedule"]
 
-                st.info(f"📋 **Executive Summary:** {summary}")
+                st.info(f"**Executive Summary:** {summary}")
 
                 m1, m2, m3 = st.columns(3)
                 m1.metric("Requiring Maintenance", metrics["total_requiring_maintenance"])
@@ -68,7 +76,7 @@ if submitted:
                 if sched_items:
                     st.markdown(
                         "<p style='color:#22c55e;font-weight:700;font-size:0.9rem;"
-                        "letter-spacing:0.06em;margin-top:1rem;'>✅ SCHEDULED — WORK ORDERS ASSIGNED</p>",
+                        "letter-spacing:0.06em;margin-top:1rem;'>SCHEDULED — WORK ORDERS ASSIGNED</p>",
                         unsafe_allow_html=True)
                     sched_df = pd.DataFrame([{
                         "Priority": r["priority_rank"],
@@ -86,7 +94,7 @@ if submitted:
                 if queued_items:
                     st.markdown(
                         "<p style='color:#f59e0b;font-weight:700;font-size:0.9rem;"
-                        "letter-spacing:0.06em;margin-top:1rem;'>⏳ QUEUED — AWAITING CREW / PARTS</p>",
+                        "letter-spacing:0.06em;margin-top:1rem;'>QUEUED — AWAITING CREW / PARTS</p>",
                         unsafe_allow_html=True)
                     queued_df = pd.DataFrame([{
                         "Priority": r["priority_rank"],
@@ -101,4 +109,4 @@ if submitted:
                                          "Risk Score", min_value=0, max_value=100, format="%.1f"),
                                  })
         except Exception as e:
-            st.error(f"⚠️ Maintenance plan generation failed: {e}")
+            st.error(f"Maintenance plan generation failed: {e}")

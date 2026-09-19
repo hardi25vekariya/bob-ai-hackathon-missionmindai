@@ -10,12 +10,12 @@ from components.backend import (
 
 load_css()
 check_backend()
-render_header("🤖 BOB COPILOT", "AI-powered mission intelligence")
+render_header("BOB COPILOT", "AI-powered mission intelligence")
 
-st.markdown('<div class="section-header">🤖 Bob Copilot</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">Bob Copilot</div>', unsafe_allow_html=True)
 
 st.markdown(
-    '<p class="bob-header">🤖 BOB COPILOT</p>'
+    '<p class="bob-header">BOB COPILOT</p>'
     '<p style="color:#94a3b8;font-size:0.85rem;margin-top:0.2rem;">'
     'IBM Bob answers these queries using live MCP tools — zero hallucination, 100% data-grounded</p>',
     unsafe_allow_html=True,
@@ -40,7 +40,7 @@ with bob_left:
     st.markdown("**Example Queries for IBM Bob**")
     for q, tool, _ in EXAMPLE_QUERIES:
         st.markdown(
-            f'<div class="bob-card">💬 &nbsp;<em>"{q}"</em></div>',
+            f'<div class="bob-card"><em>"{q}"</em></div>',
             unsafe_allow_html=True,
         )
 
@@ -55,7 +55,7 @@ with bob_right:
 st.markdown(
     '<div style="background:#0f1f3d;border:1px solid #1e40af;border-radius:8px;padding:1rem;'
     'margin-top:0.8rem;font-size:0.83rem;color:#93c5fd;">'
-    '📡 <strong>Connect IBM Bob:</strong> Register the MCP server using the config in '
+    '<strong>Connect IBM Bob:</strong> Register the MCP server using the config in '
     '<code>docs/setup-guide.md</code>. IBM Bob will call '
     '<span class="mcp-tag">get_fleet_readiness</span>, '
     '<span class="mcp-tag">get_asset_risk</span>, and '
@@ -66,7 +66,7 @@ st.markdown(
 )
 
 # ── Live MCP Tool Test ──
-with st.expander("🔧 Live MCP Tool Test — Verify Backend Integration"):
+with st.expander("Live MCP Tool Test — Verify Backend Integration"):
     st.markdown(
         "<p style='color:#94a3b8;font-size:0.82rem;'>These buttons call the MCP handlers "
         "directly and display the raw JSON response — the same data IBM Bob receives.</p>",

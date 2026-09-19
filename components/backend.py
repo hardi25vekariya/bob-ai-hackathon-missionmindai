@@ -36,7 +36,7 @@ except Exception as _e:
 
 def check_backend():
     if not _BACKEND_OK:
-        st.error(f"❌ Could not load backend: {_BACKEND_ERR}")
+        st.error(f"Could not load backend: {_BACKEND_ERR}")
         st.info("Ensure you run this from the project root: `streamlit run streamlit_app.py`")
         st.stop()
 

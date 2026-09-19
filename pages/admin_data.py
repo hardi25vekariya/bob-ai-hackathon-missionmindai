@@ -86,7 +86,7 @@ if uploaded_file is not None:
                     st.markdown("**Column Names:**")
                     st.code(", ".join(df.columns))
                     
-                    if st.button("📥 Import Dataset", type="primary", use_container_width=True):
+                    if st.button("Import Dataset", type="primary", use_container_width=True):
                         # Save the dataset to the data directory securely
                         save_path = os.path.join(_DATA_DIR, "uploaded_sensor_data.csv")
                         

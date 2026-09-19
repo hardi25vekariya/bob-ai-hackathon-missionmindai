@@ -228,7 +228,9 @@ def handle_get_asset_risk(asset_id=None, sensor_file=None, service_file=None):
                 "risk_score": float(asset_record["risk_score"]),
                 "reason": asset_record["reason"],
                 "diagnostic_reason": asset_record["reason"],
-                "readiness_details": asset_record["readiness_explanation"]
+                "readiness_details": asset_record["readiness_explanation"],
+                "cancellation_probability": float(asset_record.get("cancellation_probability", 0.0)),
+                "subsystem_risks": asset_record.get("subsystem_risks", {})
             }
 
         else:
