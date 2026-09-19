@@ -255,28 +255,21 @@ def short_diag(text: str, n: int = 90) -> str:
 # ---------------------------------------------------------------------------
 # ── HEADER ──────────────────────────────────────────────────────────────────
 # ---------------------------------------------------------------------------
-col_title, col_refresh = st.columns([5, 1])
-with col_title:
-    st.markdown(
-        '<h1 style="color:#93c5fd;margin-bottom:0;font-size:2rem;letter-spacing:0.04em;">✈ AeroGuard-Bob</h1>',
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        '<p style="color:#94a3b8;margin-top:0.1rem;margin-bottom:0.2rem;font-size:1rem;">'
-        'Mission Readiness &amp; Predictive Maintenance Copilot</p>',
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        '<span style="background:#1e3a5f;color:#93c5fd;border-radius:4px;padding:3px 10px;'
-        'font-size:0.72rem;font-weight:700;letter-spacing:0.06em;">'
-        'IBM BOB HACKATHON · DEFENSE &amp; AEROSPACE · D1</span>',
-        unsafe_allow_html=True,
-    )
-with col_refresh:
-    st.markdown("<br>", unsafe_allow_html=True)
-    if st.button("🔄 Refresh Data", use_container_width=True):
-        st.cache_data.clear()
-        st.rerun()
+st.markdown(
+    '<div style="color:#93c5fd;margin-bottom:0;font-size:2rem;font-weight:bold;letter-spacing:0.04em;">✈ AeroGuard-Bob</div>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<p style="color:#94a3b8;margin-top:0.1rem;margin-bottom:0.2rem;font-size:1rem;">'
+    'Mission Readiness &amp; Predictive Maintenance Copilot</p>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<span style="background:#1e3a5f;color:#93c5fd;border-radius:4px;padding:3px 10px;'
+    'font-size:0.72rem;font-weight:700;letter-spacing:0.06em;">'
+    'IBM BOB HACKATHON · DEFENSE &amp; AEROSPACE · D1</span>',
+    unsafe_allow_html=True,
+)
 
 st.markdown("<hr style='margin:1rem 0 0.5rem 0;'>", unsafe_allow_html=True)
 
@@ -652,9 +645,7 @@ except Exception as e:
 st.markdown('<div class="section-header">🤖 Bob Copilot</div>', unsafe_allow_html=True)
 
 st.markdown(
-    '<p class="bob-header">🤖 BOB COPILOT</p>'
-    '<p style="color:#94a3b8;font-size:0.85rem;margin-top:0.2rem;">'
-    'IBM Bob answers these queries using live MCP tools — zero hallucination, 100% data-grounded</p>',
+    '<p class="bob-header">🤖 BOB COPILOT</p>',
     unsafe_allow_html=True,
 )
 
